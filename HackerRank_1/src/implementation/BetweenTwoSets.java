@@ -1,6 +1,8 @@
+package implementation;
+
 import java.util.Scanner;
 
-public class BetweenTwoSetss {
+public class BetweenTwoSets {
 	    static int getTotalX(int[] a, int[] b){
 	        int counter = 0;
 	        for(int i = a[a.length-1];i<=b[0];i++){
@@ -42,5 +44,5 @@ public class BetweenTwoSetss {
 	        int total = getTotalX(a, b);
 	        System.out.println(total);
 	    }
-	}
-
+	
+}
