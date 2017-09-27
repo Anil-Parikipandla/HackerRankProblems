@@ -1,13 +1,54 @@
 package implementation;
 
-import java.util.Arrays;
-
-import algos.CountingSort;
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
 public class MigratoryBirds {
-	public static void main(String[] args) {
-		int[]  input = { 3897, 98457, 1, 1, 2, 6, 24, 120, 72, 5040 };
-		int[] output = CountingSort.countingSort(input);
-		System.out.println(Arrays.toString(output));
-	}
+
+    static int migratoryBirds(int n, int[] arr) {
+/*    	int[] counterArray = new int[ar.length];
+    	for(int i = 0; i < ar.length; i++){
+    		arr[(arr[i]%k)] += k;
+    	}
+    	
+    	
+    	return n;*/
+    	int k =n;
+        for (int i = 0; i< n; i++){
+//            arr[(arr[i]%k)] += k;
+        	 int x = arr[i]%k;
+        arr[x] = arr[x] +k;
+        }
+        // Find index of the maximum repeating element
+        int max = arr[0], result = 0;
+        for (int i = 1; i < n; i++)
+        {
+            if (arr[i] > max)
+            {
+                max = arr[i];
+                result = i;
+            }
+        }
+ 
+        /* Uncomment this code to get the original array back
+        for (int i = 0; i< n; i++)
+          arr[i] = arr[i]%k; */
+ 
+        // Return index of the maximum element
+        return result;
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int[] ar = new int[n];
+        for(int ar_i = 0; ar_i < n; ar_i++){
+            ar[ar_i] = in.nextInt();
+        }
+        int result = migratoryBirds(n, ar);
+        System.out.println(result);
+    }
 }
