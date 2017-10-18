@@ -7,7 +7,7 @@ import java.math.*;
 import java.util.regex.*;
 
 public class BonAppetit {
-
+//
     static int bonAppetit(int n, int k, int b, int[] ar) {
     	int bActual = 0;
     	for(int i = 0; i < ar.length; i++){
