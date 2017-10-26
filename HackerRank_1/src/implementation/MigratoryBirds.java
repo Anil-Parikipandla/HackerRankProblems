@@ -52,3 +52,47 @@ public class MigratoryBirds {
         System.out.println(result);
     }
 }
+
+/*package implementation;
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class MigratoryBirds {
+
+    static int migratoryBirds(int n, int[] ar) {
+    	Arrays.sort(ar);
+    	int currentBirdCount = 1;
+    	int highestCount = 0;
+    	int currentBird = ar[0];
+    	int mostfrequentBird = ar[0]; 
+    	for(int i = 0; i < ar.length-1; i++){
+    		currentBird = ar[i];
+    		if(ar[i]==ar[i+1]){
+    			currentBirdCount++;
+    			if(currentBirdCount > highestCount){
+    				highestCount = currentBirdCount;
+    				mostfrequentBird = currentBird;
+    			}
+    		} else{
+    			currentBirdCount = 1;
+    		}
+    	}
+		return mostfrequentBird;
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int[] ar = new int[n];
+        for(int ar_i = 0; ar_i < n; ar_i++){
+            ar[ar_i] = in.nextInt();
+        }
+        int result = migratoryBirds(n, ar);
+        System.out.println(result);
+    }
+}
+*/
